@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace VadimPractice
@@ -32,21 +33,33 @@ namespace VadimPractice
             if (login == "test1" && password == "111")
             {
                 MessageBox.Show("Успешный вход как test1");
-                MainWindow mainWindow = new MainWindow();
+                string user = "test1";
+                MainWindow mainWindow = new MainWindow(user);
                 mainWindow.Show();
                 this.Close();
             }
             else if (login == "test2" && password == "222")
             {
                 MessageBox.Show("Успешный вход как test2");
-                MainWindow mainWindow = new MainWindow();
+                string user = "test2";
+                MainWindow mainWindow = new MainWindow(user);
                 mainWindow.Show();
                 this.Close();
             }
             else if (login == "test3" && password == "333")
             {
                 MessageBox.Show("Успешный вход как test3");
-                MainWindow mainWindow = new MainWindow();
+                string user = "test3";
+                MainWindow mainWindow = new MainWindow(user);
+                mainWindow.Show();
+                this.Close();
+            }
+            else if (login == "Admin" && password == "Admin")
+            {
+                MessageBox.Show("Успешный вход как Admin");
+                string user = "Admin";
+                MainWindow mainWindow = new MainWindow(user);
+
                 mainWindow.Show();
                 this.Close();
             }
